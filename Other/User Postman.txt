@@ -1,0 +1,12 @@
+{
+  "name": "Vikas Ambekar",
+  "email": "ambekarviks@gmail.com",
+  "password": "Vikas@123",
+  "city": "Mumbai",
+  "state": "Maharashtra",
+  "pinCode": {
+    "$numberLong": "421204"
+  },
+  "address": "CASA Elite P 602",
+  "_class": "com.movie.entity.User"
+}

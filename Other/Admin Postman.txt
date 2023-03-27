@@ -1,0 +1,6 @@
+{
+    "adminMobileNo": 7900001883,
+    "adminName": "Vikas Ambekar",
+    "adminEmailId": "admin1@movieapp.com",
+    "adminPassword": "Admin1@movieapp"
+}
