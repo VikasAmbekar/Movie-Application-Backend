@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Other/Kotlin Project Movie-Application/Eureka-Server/Eureka-Server.iml" filepath="$PROJECT_DIR$/Other/Kotlin Project Movie-Application/Eureka-Server/Eureka-Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eureka-Server/Eureka-Server (1).iml" filepath="$PROJECT_DIR$/Eureka-Server/Eureka-Server (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Other/Kotlin Project Movie-Application/Admin Microservice/Microservice.iml" filepath="$PROJECT_DIR$/Other/Kotlin Project Movie-Application/Admin Microservice/Microservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Admin Microservice/Microservice (1).iml" filepath="$PROJECT_DIR$/Admin Microservice/Microservice (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Other/Kotlin Project Movie-Application/Movie-Application/Movie-Application.iml" filepath="$PROJECT_DIR$/Other/Kotlin Project Movie-Application/Movie-Application/Movie-Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Movie-Application/Movie-Application (1).iml" filepath="$PROJECT_DIR$/Movie-Application/Movie-Application (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Movie-Application-Backend.iml" filepath="$PROJECT_DIR$/.idea/Movie-Application-Backend.iml" />
+    </modules>
+  </component>
+</project>
