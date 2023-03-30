@@ -1,0 +1,18 @@
+{
+  "_id": "T12",
+  "name": "Xperia PVR",
+  "city": "Dombivali",
+  "State": "Maharashtra",
+  "pinCode": {
+    "$numberLong": "421203"
+  },
+  "address": "Lodha Palava City, Phase 1",
+  "noOfSeats": {
+    "$numberLong": "120"
+  },
+  "noOfScreens": {
+    "$numberLong": "3"
+  },
+  "costOfTicket": 140.4,
+  "_class": "com.movie.entity.Theater"
+}

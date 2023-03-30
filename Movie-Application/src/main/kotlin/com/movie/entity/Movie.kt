@@ -1,10 +1,10 @@
 package com.movie.entity
 
 import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.DBRef
 import org.springframework.data.mongodb.core.mapping.Document
 import java.util.Date
-import javax.persistence.JoinColumn
-import javax.persistence.ManyToOne
+
 
 @Document("Movie")
 data class Movie(
@@ -19,5 +19,8 @@ data class Movie(
         val castList: List<String>,
         val releaseDate: Date,
         val noOfWeeks: Long,
+
+//        @DBRef
+//        val theater: Theater
 
 )

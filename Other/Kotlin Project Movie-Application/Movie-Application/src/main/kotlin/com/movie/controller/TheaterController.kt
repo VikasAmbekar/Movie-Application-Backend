@@ -1,6 +1,5 @@
 package com.movie.controller
 
-
 import com.movie.entity.Theater
 import com.movie.repository.TheaterRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -15,27 +14,24 @@ import org.springframework.web.bind.annotation.RestController
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
-
 @RestController
 @RequestMapping("/theater")
 class TheaterController(
         @Autowired
-        val theaterRepository: TheaterRepository,
-
-
+        val theaterRepository: TheaterRepository
 ) {
     @GetMapping("/")
-    fun getAllTheaters() : Flux<Theater> {
+    fun getAllTheaters() : Flux<Theater>{
         return theaterRepository.findAll()
     }
 
     @GetMapping("/{id}")
-    fun getTheaterById(@PathVariable id: String) : Mono<Theater> {
+    fun getTheaterById(@PathVariable id: String) : Mono<Theater>{
         return theaterRepository.findById(id)
     }
 
     @PostMapping("/")
-    fun addThreater(@RequestBody theater: Theater) : Mono<Theater>{
+    fun addThreater(@RequestBody theater: Theater) : Mono<Theater> {
         return theaterRepository.save(theater)
     }
 

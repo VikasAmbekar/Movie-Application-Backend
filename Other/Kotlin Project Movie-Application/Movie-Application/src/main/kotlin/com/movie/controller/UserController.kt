@@ -1,9 +1,10 @@
 package com.movie.controller
 
-
-import com.movie.entity.Theater
-import com.movie.repository.TheaterRepository
+import com.movie.entity.User
+import com.movie.repository.UserRepository
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -15,42 +16,43 @@ import org.springframework.web.bind.annotation.RestController
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
-
 @RestController
-@RequestMapping("/theater")
-class TheaterController(
+@RequestMapping("/user")
+class UserController(
         @Autowired
-        val theaterRepository: TheaterRepository,
-
+        val userRepository: UserRepository
 
 ) {
+
     @GetMapping("/")
-    fun getAllTheaters() : Flux<Theater> {
-        return theaterRepository.findAll()
+    fun getAllUsers() : Flux<User>{
+        return userRepository.findAll()
     }
 
     @GetMapping("/{id}")
-    fun getTheaterById(@PathVariable id: String) : Mono<Theater> {
-        return theaterRepository.findById(id)
+    fun getUserById(@PathVariable mobileNo : Long) : Mono<User>{
+        return userRepository.findById(mobileNo)
     }
 
     @PostMapping("/")
-    fun addThreater(@RequestBody theater: Theater) : Mono<Theater>{
-        return theaterRepository.save(theater)
+    fun addUser(@RequestBody user : User) : Mono<User>{
+        return  userRepository.save(user)
+
     }
 
     @PutMapping("/")
-    fun updateTheater(@RequestBody theater: Theater) : Mono<Theater>{
-        return theaterRepository.save(theater)
+    fun updateUser(@RequestBody user: User): Mono<User>{
+        return userRepository.save(user)
+
     }
 
     @DeleteMapping("/{id}")
-    fun deleteTheater(@PathVariable id : String) : Mono<Void>{
-        return theaterRepository.deleteById(id)
+    fun deleteUserById(@PathVariable mobileNo: Long) : Mono<Void>{
+        return userRepository.deleteById(mobileNo)
     }
 
     @DeleteMapping("/all")
-    fun deleteAllTheaters() : Mono<Void>{
-        return theaterRepository.deleteAll()
+    fun deleteAllUsers() : Mono<Void>{
+        return userRepository.deleteAll()
     }
 }

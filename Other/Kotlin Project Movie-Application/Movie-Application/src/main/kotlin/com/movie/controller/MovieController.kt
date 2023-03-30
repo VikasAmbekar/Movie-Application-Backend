@@ -1,8 +1,8 @@
 package com.movie.controller
 
-
-import com.movie.entity.Theater
-import com.movie.repository.TheaterRepository
+import com.movie.MovieApplication
+import com.movie.entity.Movie
+import com.movie.repository.MovieRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
@@ -15,42 +15,40 @@ import org.springframework.web.bind.annotation.RestController
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
-
 @RestController
-@RequestMapping("/theater")
-class TheaterController(
+@RequestMapping("/movie")
+class MovieController(
         @Autowired
-        val theaterRepository: TheaterRepository,
-
-
+        val movieRepository: MovieRepository
 ) {
+
     @GetMapping("/")
-    fun getAllTheaters() : Flux<Theater> {
-        return theaterRepository.findAll()
+    fun getAllMovies(): Flux<Movie>{
+        return movieRepository.findAll()
     }
 
     @GetMapping("/{id}")
-    fun getTheaterById(@PathVariable id: String) : Mono<Theater> {
-        return theaterRepository.findById(id)
+    fun getMovieById(@PathVariable id : String) : Mono<Movie>{
+        return movieRepository.findById(id)
     }
 
     @PostMapping("/")
-    fun addThreater(@RequestBody theater: Theater) : Mono<Theater>{
-        return theaterRepository.save(theater)
+    fun addMovie(@RequestBody movie: Movie) :Mono<Movie>{
+        return movieRepository.save(movie)
     }
 
     @PutMapping("/")
-    fun updateTheater(@RequestBody theater: Theater) : Mono<Theater>{
-        return theaterRepository.save(theater)
+    fun updateMovie(@RequestBody movie: Movie) :Mono<Movie>{
+        return movieRepository.save(movie)
     }
 
     @DeleteMapping("/{id}")
-    fun deleteTheater(@PathVariable id : String) : Mono<Void>{
-        return theaterRepository.deleteById(id)
+    fun deleteMovie(@PathVariable id: String) : Mono<Void>{
+        return movieRepository.deleteById(id)
     }
 
     @DeleteMapping("/all")
-    fun deleteAllTheaters() : Mono<Void>{
-        return theaterRepository.deleteAll()
+    fun deleteAll() : Mono<Void>{
+        return movieRepository.deleteAll()
     }
 }

@@ -1,0 +1,21 @@
+{
+  "_id": "M12",
+  "movieTitle": "Kantara",
+  "duration": "2hr 30mins",
+  "rating": 8.3,
+  "category": "Action",
+  "language": "Kannad",
+  "movieImage": "https://upload.wikimedia.org/wikipedia/en/8/84/Kantara_poster.jpeg",
+  "castList": [
+    "Pratik waso",
+    "Jill Chawhan",
+    "Vikas Ambekar"
+  ],
+  "releaseDate": {
+    "$date": "2023-03-23T00:00:00.000Z"
+  },
+  "noOfWeeks": {
+    "$numberLong": "3"
+  },
+  "_class": "com.movie.entity.Movie"
+}
